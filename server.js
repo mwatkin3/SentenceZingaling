@@ -90,7 +90,7 @@ app.post('/joingame', function (req, res) {
     return null;
   }
 
-  if(game.isStarted || game.players.length >= 4) {
+  if(game.players.length >= 4) {
     res.writeHead(500, { 'Content-Type': 'application/json' });
     res.write(JSON.stringify({ error: "too many players" }));
     res.end();

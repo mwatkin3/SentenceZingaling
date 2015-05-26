@@ -16,7 +16,7 @@ function removeFromArray(array, item) {
 
 function list() {
   return toInfo(_.filter(gameList, function(x) {
-    return x.players.length < 4 && !x.isStarted
+    return x.players.length < 4 && !x.isFull
   }));
 }
 
@@ -37,6 +37,7 @@ function addGame(game) {
   game.winnerId = null;
   game.winningCardId = null;
   game.isStarted = false;
+  game.isFull = false;
   game.deck = getDeck();
   game.currentBlackCard = "";
   game.isReadyForScoring = false;
@@ -91,16 +92,22 @@ function departGame(gameId, playerId) {
         var departingPlayer = _.find(game.players, function(p){
             return p.id === playerId;
         });
+        readyForNextRound(gameId, playerId)
         removeFromArray(game.players, departingPlayer);
         if(game.players.length === 0){
             //kill the game
             removeFromArray(gameList, game);
+        }
+        else {
+        	//game.isStarted = false;
+        	game.isFull = false;
         }
     }
 }
 
 function startGame(game) {
   game.isStarted = true;
+  game.isFull = true;
   setCurrentBlackCard(game);
   game.players[0].isCzar = true;
 }
@@ -225,7 +232,6 @@ exports.list = list;
 exports.listAll = listAll;
 exports.addGame = addGame;
 exports.getGame = getGame;
-exports.getPlayer = getPlayer;
 exports.joinGame = joinGame;
 exports.departGame = departGame;
 exports.readyForNextRound = readyForNextRound;

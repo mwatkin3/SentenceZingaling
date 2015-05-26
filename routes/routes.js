@@ -1,6 +1,3 @@
-/**
- * Created by chriss on 1/1/14.
- */
 'use strict'
 /*
  * GET home page.

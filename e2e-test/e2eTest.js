@@ -1,6 +1,3 @@
-/**
- * Created by chriss on 1/10/14.
- */
 describe('node against humanity lobby', function() {
   it('should display the noGames text only when no games are available', function() {
     browser.get('http://localhost:3000');
