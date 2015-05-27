@@ -134,7 +134,7 @@ function black() {
     "The first thing I do when I get home is ________.",
     "Who's that girl?",
     "You're a pain in my ________",
-    "Mmmmmmm.  I could really go for some ________ right now."
+    "Mmmmmmm.  I could really go for some ________ right now.",
     "Grandma got run over by a _________.",
     "Would you like ________ with that shake?"
   ];
