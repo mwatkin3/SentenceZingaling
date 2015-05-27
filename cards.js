@@ -128,7 +128,15 @@ function black() {
     "Will Smith: the Fresh Prince of _________.",
     "The meaning of life is to justify _________.",
     "She blinded me with _________.",
-    "A bird in the hand is worth __________."
+    "A bird in the hand is worth __________.",
+    "Don't shake your ________ on my bed.",
+    "My ________ brings all the boys to the yard.",
+    "The first thing I do when I get home is ________.",
+    "Who's that girl?",
+    "You're a pain in my ________",
+    "Mmmmmmm.  I could really go for some ________ right now."
+    "Grandma got run over by a _________.",
+    "Would you like ________ with that shake?"
   ];
 }
 
@@ -267,7 +275,43 @@ function white() {
    "Susan Saranwrap",
    "George Snuffleupagus",
    "Brad Peach Pitt",
-   "Normal Al Yankovic"
+   "Normal Al Yankovic", 
+   "Supah Anvil of Doom",
+   "Carnival of Coal",
+   "Stinky Death Breath",
+   "Defeated Santa Sanity",
+   "Indiana Jones and the Infernal Machine",
+   "My grain headache",
+   "Molotov Solution",
+   "Death at a funeral",
+   "Swallowing the Sun",
+   "Awkward Turtle",
+   "Serious George",
+   "Tickled too much Elmo",
+   "Jello pudding pops",
+   "Bro-down showdown",
+   "Cardboard armor battle royale",
+   "Thug life cat",
+   "Gaming on a toaster",
+   "GPS saying 'head west' like its Oregon Trail",
+   "Eating a whole bag of Warheads at once",
+   "Hating Justin Bieber before it was cool",
+   "Chicken hat",
+   "Star Shrek Enterprise",
+   "Makin' dat Youtube monies",
+   "Getting jacked without the gym",
+   "Getting a picture of a thumbs down in a fortune cookie",
+   "Techno Viking",
+   "Neckbeard the pirate",
+   "Avatar the Last Hairbender",
+   "Pooptarts",
+   "Mean muggin'",
+   "Forever Alone Guy",
+   "Eager Face Engaged",
+   "Taco Monster",
+   "Broseidon, Loard of the broceans",
+   "Turban Outfitters",
+   "Giant Snail Jousting"
   ];
 }
 
