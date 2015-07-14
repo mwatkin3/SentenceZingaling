@@ -134,7 +134,7 @@ function black() {
     "You're a pain in my ________",
     "Mmmmmmm.  I could really go for some ________ right now.",
     "Grandma got run over by a _________.",
-    "Would you like ________ with that shake?"
+    "Would you like ________ with that shake?",
     "Strike while the ________ is hot.",
     "It's always darkest before the ________",
     "Don't bite the hand that ________ you.",
@@ -308,9 +308,27 @@ function white() {
    "Forever Alone Guy",
    "Eager Face Engaged",
    "Taco Monster",
-   "Broseidon, Loard of the broceans",
+   "Broseidon, Lord of the broceans",
    "Turban Outfitters",
-   "Giant Snail Jousting"
+   "Giant Snail Jousting",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc"
   ];
 }
 

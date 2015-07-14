@@ -1,6 +1,8 @@
 var _ = require('underscore');
 var cards = require('./cards.js');
 
+const MAX_PLAYERS = 4
+
 var gameList = [];
 
 function getDeck() {
@@ -16,7 +18,7 @@ function removeFromArray(array, item) {
 
 function list() {
   return toInfo(_.filter(gameList, function(x) {
-    return x.players.length < 4 && !x.isFull
+    return x.players.length < MAX_PLAYERS && !x.isFull
   }));
 }
 
@@ -68,7 +70,7 @@ function joinGame(game, player) {
 
     game.players.push(joiningPlayer);
 
-    if(game.players.length === 4) {
+    if(game.players.length === MAX_PLAYERS) {
         if(!game.isStarted){
             startGame(game);
         } else {
@@ -130,6 +132,7 @@ function roundEnded(game) {
     player.selectedWhiteCardId = null;
   });
 
+  /*
   if(game.players[0].isCzar === true) {
     game.players[0].isCzar = false;
     game.players[1].isCzar = true;
@@ -150,6 +153,29 @@ function roundEnded(game) {
     game.players[0].isCzar = true;
     game.players[0].isReady = false;
   }
+  */
+  
+  for(playerId = 0; playerId < MAX_PLAYERS; playerId++) {
+	  console.info('In the for loop for player:' + playerId);
+    if(game.players[playerId].isCzar === true) {
+      console.info('Player is Czar:' + playerId);
+      if(playerId === (MAX_PLAYERS - 1)) {
+    	console.info('IF');
+        game.players[playerId].isCzar === false;
+        game.players[0].isCzar === true;
+        game.players[0].isReady === true;
+      }
+      else {
+    	console.info('ELSE');
+        game.players[playerId].isCzar === false;
+        game.players[playerId+1].isCzar === true;
+        game.players[playerId+1].isReady === true;
+        console.info([playerId].isCzar)
+      }
+      break;
+    }
+  }
+  
     if(game.isOver){
         _.map(game.players, function(p) {
             p.awesomePoints = 0;

@@ -86,6 +86,13 @@ angular.module('myApp.controllers', [])
             return ($scope.currentPlayer.isCzar && $scope.game.isStarted && $scope.game.isReadyForScoring) ||
                 $scope.game.isReadyForReview
         };
+        
+        $scope.isUrl = function(card) {
+    		if (card.indexOf("://") > -1) {
+    			return true
+    		}
+    		return false
+    	};
         //end ng-show helper functions
 
         $scope.buildWinningText = function(history) {

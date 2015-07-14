@@ -7,6 +7,8 @@ var players = { };
 var io = require('socket.io').listen(server);
 var socketCount = 0;
 
+const MAX_PLAYERS = 4
+
 server.listen(process.env.PORT || 3000);
 
 app.set('view engine', 'ejs');
@@ -90,7 +92,7 @@ app.post('/joingame', function (req, res) {
     return null;
   }
 
-  if(game.players.length >= 4) {
+  if(game.players.length >= MAX_PLAYERS) {
     res.writeHead(500, { 'Content-Type': 'application/json' });
     res.write(JSON.stringify({ error: "too many players" }));
     res.end();

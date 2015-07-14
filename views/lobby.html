@@ -1,20 +1,24 @@
 <center>
 <h4>Welcome to SentenceZingaling</h4>
-</center>
 <hr />
 
-<ul>
-  <li>First enter your name at the top of the page.</li>
-  <li>Use the Create Game link or click an open game below.</li>
-</ul>
+<div id="CreateGame">
+	<form class="navbar-form" ng-show="inLobby" role="search">
+        <div class="form-group">
+        	<input type="text" class="form-control" placeholder="enter your name" max-width="100px" ng-model="gameSvc.playerName">
+        </div>
+        <button id="aCreateGame" ng-click="createGame()" type="button" class="btn btn-primary">Create Game</button>
+    </form>
+</div>
 
 <hr />
 <div class="row" id="availableGames" >
   <div class="col-lg-10">
-    <strong id="noGames" ng-show="availableGames.length == 0">no open games... use the Create Game link at the top to start one.</strong>
+    <strong id="noGames" ng-show="availableGames.length == 0">no open games... use the Create Game button to start one.</strong>
     <div ng-repeat="game in availableGames" class="well">
       <button ng-click="joinGame(game.id)" type="button" class="btn btn-primary" style="margin-right: 10px;">Join Game</button>
-      <span style="font-size: larger">{{game.name}} - {{game.players}} of 4 players</span>
+      <span style="font-size: larger">{{game.name}} - {{game.players}} of {{game.MAX_PLAYERS}} players</span>
     </div>
   </div>
 </div>
+</center>
