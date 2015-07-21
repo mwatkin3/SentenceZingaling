@@ -38,8 +38,11 @@
         <td>
           <button class="btn btn-default" ng-show="!game.isReadyForReview" ng-click="selectWinner(player.selectedWhiteCardId)">select</button>
           <span ng-show="game.isReadyForReview">{{player.name}}</span>
-        </td>
-        <td class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><span ng-show="game.winningCardId === player.selectedWhiteCardId">Winner: &nbsp;</span><img src={{player.selectedWhiteCardId}} alt={{player.selectedWhiteCardId}} height="92" width="92"></td>
+        </td>       
+		<span ng-show="game.winningCardId === player.selectedWhiteCardId">
+          <td ng-show="isUrl(player.selectedWhiteCardId)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{player.selectedWhiteCardId}} alt={{player.selectedWhiteCardId}} height="92" width="92"></td>
+          <td ng-show="!isUrl(player.selectedWhiteCardId)"class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;">{{player.selectedWhiteCardId}}</td>
+        </span>
       </tr>
     </tbody>
   </table>
