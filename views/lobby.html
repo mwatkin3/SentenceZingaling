@@ -17,7 +17,7 @@
     <strong id="noGames" ng-show="availableGames.length == 0">no open games... use the Create Game button to start one.</strong>
     <div ng-repeat="game in availableGames" class="well">
       <button ng-click="joinGame(game.id)" type="button" class="btn btn-primary" style="margin-right: 10px;">Join Game</button>
-      <span style="font-size: larger">{{game.name}} - {{game.players}} of {{game.MAX_PLAYERS}} players</span>
+      <span style="font-size: larger">{{game.name}} - {{game.players}} of {{game.maxPlayers}} players</span>
     </div>
   </div>
 </div>
