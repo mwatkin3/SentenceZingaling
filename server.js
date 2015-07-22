@@ -18,6 +18,10 @@ app.use(express.bodyParser());
 app.use(app.router);
 app.use('/public', express.static('public'));
 
+app.post('/', function(request, response){
+    alert(request.body.name);
+});
+
 function returnGame(gameId, res) { res.json(gameViewModel(gameId)); }
 
 function broadcastGame(gameId) {
