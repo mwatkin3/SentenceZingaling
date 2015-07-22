@@ -19,7 +19,7 @@ app.use(app.router);
 app.use('/public', express.static('public'));
 
 app.post('/', function(request, response){
-    alert(request.body.name);
+    console.log(request.body.name);
 });
 
 function returnGame(gameId, res) { res.json(gameViewModel(gameId)); }
