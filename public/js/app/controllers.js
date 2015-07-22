@@ -12,6 +12,10 @@ angular.module('myApp.controllers', [])
 
         $scope.gameSvc = GameService;
         $scope.inLobby = true;
+        
+        $scope.random = function() {
+            return 0.5 - Math.random();
+        }
 
         $scope.createGame = function() {
             console.info('createGame called');

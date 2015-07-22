@@ -28,12 +28,13 @@ function listAll() {
 
 function toInfo(fullGameList) {
   return _.map(fullGameList, function(game) {
-    return { id: game.id, name: game.name, players: game.players.length };
+    return { id: game.id, name: game.name, players: game.players.length, maxPlayers: game.maxPlayers };
   });
 }
 
 function addGame(game) {
   game.players = [];
+  game.maxPlayers = MAX_PLAYERS
   game.history = [];
   game.isOver = false;
   game.winnerId = null;
@@ -131,50 +132,22 @@ function roundEnded(game) {
     player.isReady = false;
     player.selectedWhiteCardId = null;
   });
-
-  /*
-  if(game.players[0].isCzar === true) {
-    game.players[0].isCzar = false;
-    game.players[1].isCzar = true;
-    game.players[1].isReady = false;
-  }
-  else if(game.players[1].isCzar === true) {
-    game.players[1].isCzar = false;
-    game.players[2].isCzar = true;
-    game.players[2].isReady = false;
-  }
-  else if(game.players[2].isCzar === true) {
-    game.players[2].isCzar = false;
-    game.players[3].isCzar = true;
-    game.players[3].isReady = false;
-  }
-  else if(game.players[3].isCzar === true) {
-    game.players[3].isCzar = false;
-    game.players[0].isCzar = true;
-    game.players[0].isReady = false;
-  }
-  */
   
-  for(playerId = 0; playerId < MAX_PLAYERS; playerId++) {
-	  console.info('In the for loop for player:' + playerId);
-	if (typeof game.players[playerId] === 'undefined') {
-		break;
-	}
-	  
+  for(playerId = 0; playerId < game.maxPlayers; playerId++) {
+	console.info('In the for loop for player:' + playerId);
     if(game.players[playerId].isCzar === true) {
       console.info('Player is Czar:' + playerId);
-      if(playerId === (MAX_PLAYERS - 1)) {
+      if(playerId === (game.maxPlayers - 1)) {
     	console.info('IF');
-        game.players[playerId].isCzar === false;
-        game.players[0].isCzar === true;
-        game.players[0].isReady === true;
+        game.players[playerId].isCzar = false;
+        game.players[0].isCzar = true;
+        game.players[0].isReady = false;
       }
       else {
     	console.info('ELSE');
-        game.players[playerId].isCzar === false;
-        game.players[playerId+1].isCzar === true;
-        game.players[playerId+1].isReady === true;
-        console.info([playerId].isCzar)
+        game.players[playerId].isCzar = false;
+        game.players[playerId+1].isCzar = true;
+        game.players[playerId+1].isReady = false;
       }
       break;
     }
