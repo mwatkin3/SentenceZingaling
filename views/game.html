@@ -34,7 +34,7 @@
 <div class="row" ng-show="showSelectedWhiteCardList()">
   <table id="selectedWhiteCards" class="table">
     <tbody>
-      <tr ng-repeat="player in game.players | filter:whiteCardNonNull" ng-class="getWinningCardClass(player.selectedWhiteCardId)">
+      <tr ng-repeat="player in game.players | orderBy:random | filter:whiteCardNonNull" ng-class="getWinningCardClass(player.selectedWhiteCardId)">
         <td>
           <button class="btn btn-default" ng-show="!game.isReadyForReview" ng-click="selectWinner(player.selectedWhiteCardId)">select</button>
           <span ng-show="game.isReadyForReview">{{player.name}}</span>
