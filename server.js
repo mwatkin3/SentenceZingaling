@@ -6,6 +6,7 @@ var routes = require('./routes/routes.js');
 var players = { };
 var io = require('socket.io').listen(server);
 var socketCount = 0;
+var fs = require('fs')
 
 const MAX_PLAYERS = 4
 
@@ -70,6 +71,20 @@ io.sockets.on('connection', function(socket) {
         lobbySocket.emit('gameAdded', Game.list());
     }
   });
+  
+  //when recieving the data from the server, push the same message to client.
+  socket.on("clientMsg", function (data) {
+      //send the data to the current client requested/sent.
+      socket.emit("serverMsg", data);
+      //send the data to all the clients who are acessing the same site(localhost)
+      socket.broadcast.emit("serverMsg", data);
+  });
+
+  socket.on("sender", function (data) {
+      socket.emit("sender", data);
+      socket.broadcast.emit("sender", data);
+  });
+  
 });
 
 app.get('/', routes.index);
@@ -127,3 +142,15 @@ app.post('/readyForNextRound', function(req, res){
   broadcastGame(req.body.gameId);
   returnGame(req.body.gameId, res);
 });
+
+function handler(req, res) {
+    fs.readFile(__dirname + '/game.html',
+        function (err, data) {
+            if (err) {
+                res.writeHead(500);
+                return res.end('Error loading index.html');
+            }
+            res.writeHead(200);
+            res.end(data);
+        });
+}

@@ -72,7 +72,7 @@
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="player in game.players">
     <span class="badge pull-left">{{player.awesomePoints}}</span>
-    &nbsp;&nbsp;{{player.name}}
+    &nbsp;&nbsp;<span id="name">{{player.name}}</span>
     <span class="pull-right">{{getPlayerStatus(player)}}</span>
     </li>
   </ul>
@@ -86,3 +86,68 @@
     </li>
   </ul>
 </div>
+<!--
+<ul id="messages"></ul>
+   <form action="">
+      <input id="m" autocomplete="off" />
+      <button id="aSend" ng-click="sendMessage()" type="button" class="btn btn-primary">Send</button>
+    </form>
+    
+    <script>
+      var socket = io();
+      $socket.on('chat message', function(msg){
+      	alert(msg);
+        $('#messages').append($('<li>').text(msg));
+      });
+    </script>
+-->
+
+<!--Message box: To show the sent/recieved messages-->
+<div id="msgBox" style="height: 200px; width: 400px; border: 1px solid blue;">
+</div>
+<!--Textbox: to enter the message text-->
+<input type="text" id="msg" style="width:300px" />
+<!--Send: A button to send the message to others
+<input type="submit" id="send" ngClick="send({{currentPlayer.name}})" />-->
+<input type="submit" id="send" value="send" />
+<br/>
+<div id="status" >
+</div>
+
+    <script>
+        var name,
+            socket = io.connect("http://localhost:3000");
+        $(function () {
+            //Get the name of the user.
+            name = document.getElementById('name').innerHTML;
+            //When send button is clicked on, send the message to server
+			$("#send").click(function () {
+                //send to the server with person name and message
+                socket.emit("clientMsg", {
+                    "name": name,
+                    "msg": $("#msg").val()
+                });
+            });
+
+            //After sending message to the server, we'll have to wire up the event for it.
+            //We can do the following. Upon recievin the message print it to the message box
+            //that we've created in our html
+            socket.on("serverMsg", function (data) {
+                //Append the message from the server to the message box
+                $("#msgBox").append("<strong>" + data.name + "</strong>: " + data.msg + "<br/>");
+            });
+
+            $("#msg").on("keyup", function (event) {
+                socket.emit("sender", {
+                    name: name
+                });
+            });
+
+            socket.on("sender", function (data) {
+                $("#status").html(data.name + " is typing");
+                setTimeout(function () {
+                    $("#status").html('');
+                }, 3000);
+            });
+        });
+    </script>

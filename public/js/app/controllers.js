@@ -31,7 +31,7 @@ angular.module('myApp.controllers', [])
         $scope.joinGame = function(gameId) {
             console.info('joinGame called for gameId ' + gameId);
             GameService.initName();
-            $location.url("/game/"+ gameId + "/pId/" + GameService.playerId + "/name/" + GameService.playerName);
+            $location.url("/game/"+ gameId + "/pId/" + GameService.playerId + "/name/" + GameService.player);
         };
 
         $scope.$on('enterLobby', function() {
@@ -90,6 +90,13 @@ angular.module('myApp.controllers', [])
             return ($scope.currentPlayer.isCzar && $scope.game.isStarted && $scope.game.isReadyForScoring) ||
                 $scope.game.isReadyForReview
         };
+        
+        $scope.sendMessage = function(){
+        	alert($('#m').val());
+        	socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            return false;
+          };
         
         $scope.isUrl = function(card) {
     		if (card.indexOf("://") > -1) {

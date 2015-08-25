@@ -135,19 +135,21 @@ function roundEnded(game) {
   
   for(playerId = 0; playerId < game.maxPlayers; playerId++) {
 	console.info('In the for loop for player:' + playerId);
-    if(game.players[playerId].isCzar === true) {
-      console.info('Player is Czar:' + playerId);
-      if(playerId === (game.maxPlayers - 1)) {
-    	console.info('IF');
-        game.players[playerId].isCzar = false;
-        game.players[0].isCzar = true;
-        game.players[0].isReady = false;
-      }
-      else {
-    	console.info('ELSE');
-        game.players[playerId].isCzar = false;
-        game.players[playerId+1].isCzar = true;
-        game.players[playerId+1].isReady = false;
+    if(game.players[playerId] != undefined) {
+      if(game.players[playerId].isCzar === true) {
+        console.info('Player is Czar:' + playerId);
+        if(playerId === (game.maxPlayers - 1)) {
+    	  console.info('IF');
+          game.players[playerId].isCzar = false;
+          game.players[0].isCzar = true;
+          game.players[0].isReady = false;
+        }
+        else {
+    	  console.info('ELSE');
+          game.players[playerId].isCzar = false;
+          game.players[playerId+1].isCzar = true;
+          game.players[playerId+1].isReady = false;
+        }
       }
       break;
     }
