@@ -37,7 +37,7 @@
       <tr ng-repeat="player in game.players | orderBy:random | filter:whiteCardNonNull" ng-class="getWinningCardClass(player.selectedWhiteCardId)">
         <td>
           <button class="btn btn-default" ng-show="!game.isReadyForReview" ng-click="selectWinner(player.selectedWhiteCardId)">select</button>
-          <span ng-show="game.isReadyForReview">{{player.name}}</span>
+          <span id="name" ng-show="game.isReadyForReview">{{player.name}}</span>
         </td>       
 		<span ng-show="game.winningCardId === player.selectedWhiteCardId">
           <td ng-show="isUrl(player.selectedWhiteCardId)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{player.selectedWhiteCardId}} alt={{player.selectedWhiteCardId}} height="92" width="92"></td>
@@ -72,7 +72,7 @@
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="player in game.players">
     <span class="badge pull-left">{{player.awesomePoints}}</span>
-    &nbsp;&nbsp;<span id="name">{{player.name}}</span>
+    &nbsp;&nbsp;{{player.name}}
     <span class="pull-right">{{getPlayerStatus(player)}}</span>
     </li>
   </ul>

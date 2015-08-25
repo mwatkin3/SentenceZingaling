@@ -135,7 +135,6 @@ function roundEnded(game) {
   
   for(playerId = 0; playerId < game.maxPlayers; playerId++) {
 	console.info('In the for loop for player:' + playerId);
-    if(game.players[playerId] != undefined) {
       if(game.players[playerId].isCzar === true) {
         console.info('Player is Czar:' + playerId);
         if(playerId === (game.maxPlayers - 1)) {
@@ -152,7 +151,6 @@ function roundEnded(game) {
         }
       }
       break;
-    }
   }
   
     if(game.isOver){
