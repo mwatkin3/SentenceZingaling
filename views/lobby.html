@@ -5,7 +5,7 @@
 <div id="CreateGame">
 	<form class="navbar-form" ng-show="inLobby" role="search">
         <div class="form-group">
-        	<input type="text" class="form-control" placeholder="enter your name" max-width="100px" ng-model="gameSvc.playerName">
+        	<input type="text" ng-required="true" class="form-control" placeholder="enter your name" max-width="100px" ng-model="gameSvc.playerName" ng-minlength=1>
         </div>
         <button id="aCreateGame" ng-click="createGame()" type="button" class="btn btn-primary">Create Game</button>
     </form>
