@@ -24,7 +24,7 @@
         <td>
           <button class="btn btn-default" ng-class="getButtonClass(whiteCard)" ng-click="selectCard(whiteCard)">{{getButtonText(whiteCard)}}</button>
         </td>
-          <td ng-show="isUrl(whiteCard)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{whiteCard}} alt={{whiteCard}} height="92" width="92"></td>
+          <td ng-show="isUrl(whiteCard)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{whiteCard}} alt={{whiteCard}} height="200" width="200"></td>
           <td ng-show="!isUrl(whiteCard)"class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;">{{whiteCard}}</td>
         </span>
       </tr>
@@ -40,7 +40,7 @@
           <span id="name" ng-show="game.isReadyForReview">{{player.name}}</span>
         </td>       
 		<span ng-show="game.winningCardId === player.selectedWhiteCardId">
-          <td ng-show="isUrl(player.selectedWhiteCardId)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{player.selectedWhiteCardId}} alt={{player.selectedWhiteCardId}} height="92" width="92"></td>
+          <td ng-show="isUrl(player.selectedWhiteCardId)" class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;"><img ng-src={{player.selectedWhiteCardId}} alt={{player.selectedWhiteCardId}} height="200" width="200"></td>
           <td ng-show="!isUrl(player.selectedWhiteCardId)"class="col-lg-10 col-md-10" style="font-size: 16px; font-weight: bold; line-height: 25px;">{{player.selectedWhiteCardId}}</td>
         </span>
       </tr>
