@@ -338,7 +338,8 @@ function white() {
    "http://budgetjustified.com/images/cleanDirt.jpg",
    "http://budgetjustified.com/images/obesity.jpg",
    "http://budgetjustified.com/images/realityTV.jpg",
-   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc"
+   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTP4gP-a5OGo1jmMWswiHduLNoAz8pv_wwtNv12OZiUP0HuF1iLqCUdKCc",
+   "http://img.wikinut.com/img/3p9jy3977y0n_32j/jpeg/724x5000/Leonardo-da-Vinci-Public-domain-Wikimedia-Common.jpeg"
   ];
 }
 
